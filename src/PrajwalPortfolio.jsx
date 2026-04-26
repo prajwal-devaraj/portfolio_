@@ -937,6 +937,14 @@ export default function PrajwalPortfolio() {
   <a className="btn primary" href={`mailto:${contact.email}`}>Contact Me</a>
   <a className="btn primary" href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
   <a className="btn primary" href={contact.github} target="_blank" rel="noreferrer">GitHub</a>
+  <a 
+  className="btn primary" 
+  href="https://prajwal-devaraj.github.io/PrajwalDevaraj_Portfolio/" 
+  target="_blank" 
+  rel="noreferrer"
+>
+  Portfolio
+</a>
 </div>
 
             <div className="contactLine">
@@ -1189,9 +1197,17 @@ export default function PrajwalPortfolio() {
   where I can build scalable products, solve real problems, and grow with strong engineering teams.
 </p>
        <div className="actions">
-  <a className="btn" href={`mailto:${contact.email}`}>Email Me</a>
-  <a className="btn" href={contact.github} target="_blank" rel="noreferrer">View GitHub</a>
-  <a className="btn" href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+<a className="btn" href={`mailto:${contact.email}`}>Email Me</a>
+<a className="btn" href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+<a className="btn" href={contact.github} target="_blank" rel="noreferrer">View GitHub</a>
+<a 
+  className="btn" 
+  href="https://prajwal-devaraj.github.io/PrajwalDevaraj_Portfolio/" 
+  target="_blank" 
+  rel="noreferrer"
+>
+  Portfolio
+</a>
 </div>
         </section>
       </main>
@@ -1336,6 +1352,7 @@ export default function PrajwalPortfolio() {
           letter-spacing: -0.06em;
           font-weight: 950;
           text-shadow: 0 12px 40px rgba(59,130,246,.18);
+          white-space: nowrap;  
         }
 
         .hero h2 {
@@ -1636,15 +1653,14 @@ export default function PrajwalPortfolio() {
           line-height: 1.8;
         }
 
-        .projectCard {
-          text-decoration: none;
-          color: inherit;
-          display: block;
-          overflow: hidden;
-          position: relative;
-          min-height: 360px;
-        }
-
+     .projectCard {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  min-height: auto;
+}
+  
         .projectVisual {
           height: 145px;
           border-radius: 18px;
@@ -1778,19 +1794,16 @@ export default function PrajwalPortfolio() {
     overflow: visible !important;
   }
 
-  #projects .hoverReveal {
-    position: static !important;
-    display: block !important;
-    opacity: 1 !important;
-    transform: none !important;
-    inset: auto !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-    margin-top: 14px !important;
-    background: rgba(15,23,42,.78) !important;
-    border: 1px solid rgba(103,232,249,.18) !important;
-  }
+#projects .hoverReveal {
+  position: relative !important;
+  opacity: 1 !important;
+  transform: none !important;
+  inset: auto !important;
+  margin-top: 14px !important;
+  padding: 16px !important;
+  background: rgba(15,23,42,.78) !important;
+  border: 1px solid rgba(103,232,249,.18) !important;
+}
 
   #projects .projectCard:hover .hoverReveal {
     opacity: 1 !important;
