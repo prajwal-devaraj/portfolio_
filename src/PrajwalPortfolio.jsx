@@ -1861,6 +1861,41 @@ export default function PrajwalPortfolio() {
     padding: 18px;
   }
 }
+
+@media (max-width: 900px) {
+  .projectCard {
+    min-height: auto;
+    height: auto;
+  }
+
+  .hoverReveal {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    inset: auto;
+    margin-top: 14px;
+    padding: 16px;
+    max-height: none;
+    overflow: visible;
+    background: rgba(15,23,42,.72);
+    border: 1px solid rgba(103,232,249,.18);
+  }
+
+  .projectCard:hover .hoverReveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .projectGrid,
+  .projectList {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .projectVisual {
+    height: 120px;
+  }
+}
       `}</style>
     </div>
   );
