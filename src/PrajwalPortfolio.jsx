@@ -1766,128 +1766,35 @@ export default function PrajwalPortfolio() {
         }
 
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 26px;
+  #projects .projectGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
   }
 
-  .nav {
-    position: relative;
-    flex-direction: column;
-    align-items: flex-start;
+  #projects .projectCard {
+    display: block !important;
+    min-height: unset !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
-  .section,
-  .cta {
-    padding: 24px;
+  #projects .hoverReveal {
+    position: static !important;
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    inset: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin-top: 14px !important;
+    background: rgba(15,23,42,.78) !important;
+    border: 1px solid rgba(103,232,249,.18) !important;
   }
 
-  .timelineItem summary {
-    grid-template-columns: 1fr;
-  }
-
-  .aboutText {
-    max-width: 100%;
-  }
-
-  .aboutText p {
-    text-align: left;
-    font-size: 15.5px;
-    line-height: 1.65;
-  }
-
-  .quoteBox {
-    font-size: 22px;
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 52px;
-  }
-
-  .projectCard {
-    min-height: auto;
-    height: auto;
-  }
-
-  .hoverReveal {
-    position: relative;
-    opacity: 1;
-    transform: none;
-    inset: auto;
-    margin-top: 14px;
-    padding: 16px;
-    max-height: none;
-    overflow: visible;
-    background: rgba(15,23,42,.72);
-    border: 1px solid rgba(103,232,249,.18);
-  }
-
-  .projectCard:hover .hoverReveal {
-    opacity: 1;
-    transform: none;
-  }
-
-  .projectGrid,
-  .projectList {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .projectVisual {
-    height: 120px;
-  }
-}
-
-@media (max-width: 520px) {
-  .page {
-    padding: 18px 10px 50px;
-  }
-
-  .section,
-  .cta,
-  .hero {
-    padding: 20px;
-    border-radius: 24px;
-  }
-
-  .nav div {
-    gap: 10px;
-  }
-
-  .nav a {
-    font-size: 12px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  .hero h2,
-  .section h2,
-  .cta h2 {
-    font-size: 28px;
-  }
-
-  .aboutText p {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .twoGrid,
-  .projectGrid,
-  .activityGrid,
-  .projectList {
-    grid-template-columns: 1fr;
-  }
-
-  .projectVisual {
-    height: 120px;
-  }
-
-  pre {
-    font-size: 12px;
-    padding: 18px;
+  #projects .projectCard:hover .hoverReveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
       `}</style>
