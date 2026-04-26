@@ -1796,6 +1796,25 @@ export default function PrajwalPortfolio() {
     opacity: 1 !important;
     transform: none !important;
   }
+    #projects {
+  display: block !important;
+  position: relative !important;
+  z-index: 5 !important;
+  margin-top: 40px !important;
+  visibility: visible !important;
+}
+
+#projects .projectGrid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+}
+
+#projects .projectCard {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 }
       `}</style>
     </div>
