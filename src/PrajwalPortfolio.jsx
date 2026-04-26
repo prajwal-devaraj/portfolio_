@@ -306,7 +306,7 @@ const experience = [
   role: "Student Catering Employee",
   org: "Culinary Services, Kent State University",
   location: "Kent, OH, USA",
-  period: "May 2024 – Aug 2026",
+  period: "May 2025 – Aug 2025",
   points: [
     {
       text: "Recognized as a high-performing team member, consistently selected for high-profile university events.",
