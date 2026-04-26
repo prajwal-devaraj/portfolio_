@@ -582,7 +582,7 @@ Error generating stack: `+a.message+`
           background: linear-gradient(90deg,rgba(37,99,235,.15),rgba(168,85,247,.12),rgba(34,211,238,.08));
         }
 
-    @media (max-width: 900px) {
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     padding: 26px;
@@ -618,12 +618,41 @@ Error generating stack: `+a.message+`
     padding: 20px;
   }
 
-  .projectCard {
-    min-height: 340px;
-  }
-
   h1 {
     font-size: 52px;
+  }
+
+  .projectCard {
+    min-height: auto;
+    height: auto;
+  }
+
+  .hoverReveal {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    inset: auto;
+    margin-top: 14px;
+    padding: 16px;
+    max-height: none;
+    overflow: visible;
+    background: rgba(15,23,42,.72);
+    border: 1px solid rgba(103,232,249,.18);
+  }
+
+  .projectCard:hover .hoverReveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .projectGrid,
+  .projectList {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .projectVisual {
+    height: 120px;
   }
 }
 
@@ -676,41 +705,6 @@ Error generating stack: `+a.message+`
   pre {
     font-size: 12px;
     padding: 18px;
-  }
-}
-
-@media (max-width: 900px) {
-  .projectCard {
-    min-height: auto;
-    height: auto;
-  }
-
-  .hoverReveal {
-    position: relative;
-    opacity: 1;
-    transform: none;
-    inset: auto;
-    margin-top: 14px;
-    padding: 16px;
-    max-height: none;
-    overflow: visible;
-    background: rgba(15,23,42,.72);
-    border: 1px solid rgba(103,232,249,.18);
-  }
-
-  .projectCard:hover .hoverReveal {
-    opacity: 1;
-    transform: none;
-  }
-
-  .projectGrid,
-  .projectList {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .projectVisual {
-    height: 120px;
   }
 }
       `})]})}function Ma({small:M,title:st}){return v.jsxs(v.Fragment,{children:[v.jsx("div",{className:"headLabel",children:M}),v.jsx("h2",{children:st})]})}function yg(){return v.jsx(gg,{})}fg.createRoot(document.getElementById("root")).render(v.jsx(tg.StrictMode,{children:v.jsx(yg,{})}));
