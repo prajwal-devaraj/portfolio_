@@ -817,6 +817,180 @@ const allProjects = [
   ["Queries over Distributed Time-Series Data", "Distributed time-series query processing concepts.", "Distributed Systems"],
 ];
 
+const courses = [
+     {
+    role: "Corporate Training & Compliance",
+    org: "Barnes & Noble College (Kent State University Bookstore)",
+    location: "Kent, OH, USA",
+    period: "2024 – 2026",
+    points: [
+      {
+        text: "Completed 20+ corporate training modules covering compliance, security, and operational workflows.",
+      },
+      {
+        text: "Security & Risk Management Training:",
+        subPoints: [
+          "Cyber Security Awareness (100% score)",
+          "VeriFone PCI Compliance Training (100%)",
+          "Anti-Money Laundering Policy (100%)",
+          "Identifying & Preventing Gift Card Fraud (100%)",
+        ],
+      },
+      {
+        text: "Ethics, Compliance & Workplace Standards:",
+        subPoints: [
+          "Integrity in Action: Ethical Decision Making",
+          "Preventing Harassment & Discrimination (100%)",
+          "BNED Information Security Policy",
+        ],
+      },
+      {
+        text: "Operational & System Training:",
+        subPoints: [
+          "myADP Workforce Systems (Time tracking, payroll, scheduling)",
+          "Workforce Management (Shift swap, scheduling, requests)",
+          "POS and transaction system workflows",
+        ],
+      },
+      {
+        text: "Customer Experience & Service Excellence:",
+        subPoints: [
+          "Power of WOW Customer Service training",
+          "Applied high-quality service standards in real-time operations",
+        ],
+      },
+      {
+        text: "Developed strong understanding of enterprise operations, compliance standards, and real-world system workflows.",
+      },
+    ],
+  },
+
+  {
+    role: "Full Stack Web Development",
+    org: "Technofly Solutions",
+    location: "Bangalore, Karnataka, India",
+    period: "Aug 2022",
+    points: [
+      {
+        text: "Completed 120+ hours of intensive full-stack training covering frontend and backend systems.",
+      },
+      {
+        text: "Built and deployed multiple web applications:",
+        subPoints: [
+          "Developed responsive UI using HTML, CSS, and JavaScript.",
+          "Implemented backend services using Python and database integration.",
+          "Ensured performance optimization and secure application design.",
+        ],
+      },
+      {
+        text: "Worked in a collaborative team environment following real-world development practices.",
+      },
+    ],
+  },
+
+  {
+    role: "Full Stack Web Development",
+    org: "BETSOL",
+    location: "Bangalore, Karnataka, India",
+    period: "May 2022 – Jul 2022",
+    points: [
+      {
+        text: "Gained hands-on experience in end-to-end web development (frontend + backend).",
+      },
+      {
+        text: "Developed 3+ application modules:",
+        subPoints: [
+          "Integrated APIs with frontend systems.",
+          "Worked with databases and backend frameworks.",
+          "Implemented deployment and debugging workflows.",
+        ],
+      },
+      {
+        text: "Strengthened understanding of scalable system design and application architecture.",
+      },
+    ],
+  },
+
+  {
+    role: "Teacher Training",
+    org: "Edsmart Edu Services Pvt Ltd",
+    location: "Bangalore, Karnataka, India",
+    period: "May 2022",
+    points: [
+      {
+        text: "Designed and optimized structured educational programs using modern pedagogical standards.",
+      },
+      {
+        text: "Collaborated with educators to create effective learning modules:",
+        subPoints: [
+          "Built age-appropriate lesson plans.",
+          "Applied instructional design techniques.",
+        ],
+      },
+      {
+        text: "Improved communication, presentation, and structured teaching methodologies.",
+      },
+    ],
+  },
+
+  {
+    role: "C Programming",
+    org: "NPTEL",
+    location: "India",
+    period: "Jun 2021 – Jan 2022",
+    points: [
+      {
+        text: "Developed strong programming fundamentals through 50+ coding exercises and assignments.",
+      },
+      {
+        text: "Improved problem-solving and algorithmic thinking:",
+        subPoints: [
+          "Optimized code for performance and memory usage.",
+          "Worked on structured programming techniques.",
+        ],
+      },
+    ],
+  },
+
+  {
+    role: "Data Science Phase Shift",
+    org: "B.M.S.C.E",
+    location: "Bangalore, Karnataka, India",
+    period: "Sep 2019",
+    points: [
+      {
+        text: "Participated in a hands-on data science workshop focusing on real-world problem solving.",
+      },
+      {
+        text: "Explored machine learning fundamentals:",
+        subPoints: [
+          "Worked with data analysis techniques.",
+          "Applied ML concepts in guided exercises.",
+        ],
+      },
+    ],
+  },
+
+  {
+    role: "IT-Wizard Plus Programme",
+    org: "NIIT",
+    location: "Bangalore, Karnataka, India",
+    period: "Jun 2014 – Mar 2015",
+    points: [
+      {
+        text: "Completed program with 'Outstanding' grade, building strong early IT foundation.",
+      },
+      {
+        text: "Gained exposure to software development and system concepts:",
+        subPoints: [
+          "Learned basics of programming and IT systems.",
+          "Developed foundational technical and analytical skills.",
+        ],
+      },
+    ],
+  },
+];
+
 const activities = [
   {
     group: "Graduate Leadership & Campus Involvement",
@@ -915,6 +1089,7 @@ export default function PrajwalPortfolio() {
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#courses">Courses</a>
             <a href="#activities">Activities</a>
           </div>
         </nav>
@@ -1172,6 +1347,46 @@ export default function PrajwalPortfolio() {
   </div>
 </section>
 
+<section id="courses" className="section glass reveal">
+  <Header small="Courses" title="Certifications, training, and technical foundations" />
+
+  <div className="timeline">
+    {courses.map((item, i) => (
+      <details className="timelineItem hoverGlow" key={item.role + item.org}>
+        <summary>
+          <b>{String(i + 1).padStart(2, "0")}</b>
+
+          <div>
+            <h3>{item.role}</h3>
+            <p>
+              {item.org} • {item.location && `${item.location} • `}
+              {item.period}
+            </p>
+          </div>
+
+          <em>View Details</em>
+        </summary>
+
+        <ul className="mainList">
+          {item.points.map((point, index) => (
+            <li key={index}>
+              {typeof point === "string" ? point : point.text}
+
+              {typeof point !== "string" && point.subPoints && (
+                <ul className="subList">
+                  {point.subPoints.map((sub, subIndex) => (
+                    <li key={subIndex}>{sub}</li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </details>
+    ))}
+  </div>
+</section>
+
        <section id="activities" className="section glass reveal">
   <Header small="Extra-Curricular Activities" title="Leadership, creativity, and campus involvement" />
 
@@ -1214,7 +1429,10 @@ export default function PrajwalPortfolio() {
 
       <style>{`
         * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+       html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
         body { margin: 0; }
 
         .page {
@@ -1302,27 +1520,51 @@ export default function PrajwalPortfolio() {
           transform: translateY(0);
         }
 
-        .nav {
-          position: sticky;
-          top: 16px;
-          z-index: 10;
-          padding: 14px 18px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 18px;
-        }
+.nav {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 
-        .nav b { color: white; font-size: 18px; }
-        .nav div { display: flex; gap: 14px; flex-wrap: wrap; }
-        .nav a {
-          color: #cbd5e1;
-          text-decoration: none;
-          font-size: 14px;
-          font-weight: 800;
-          transition: .25s ease;
-        }
-        .nav a:hover { color: #67e8f9; }
+  width: calc(100% - 40px);
+  max-width: 1100px;
+
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(15, 23, 42, 0.25);   /* 🔥 transparent */
+  backdrop-filter: blur(20px);          /* glass effect */
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+}
+  
+.nav b {
+  color: white;
+  font-size: 18px;
+}
+
+.nav div {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  transition: .25s ease;
+}
+
+.nav a:hover {
+  color: #67e8f9;
+}
 
         .hero {
           padding: 42px;
