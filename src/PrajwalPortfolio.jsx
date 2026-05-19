@@ -26,7 +26,7 @@ const education = [
     website: "https://www.kent.edu/",
     degree: "Master of Science in Computer Science",
     period: "Aug 2024 – May 2026",
-    gpa: "3.954",
+    gpa: "3.966",
     details:
       "Advanced Database Systems, Data Mining, Social & Graph Networks, AI, ML & Deep Learning, Data Security & Privacy, Advanced Computer Graphics, IoT Integration, AI for Robotics.",
   },
